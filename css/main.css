@@ -1,0 +1,469 @@
+/*standard DOM*/
+body{
+  font-family: 'Lato', sans-serif;
+  font-size:1.5em;
+  line-height:1.6em;
+  background-color:#f1f1f1;
+}
+p{
+  font-size: .5em;
+  line-height: 2.1em;
+  font-family:'Merriweather', serif;
+  font-weight:300;
+}
+.bold{
+  font-weight:600;
+}
+h1, h2, h3, h4{
+  color:#561843;
+}
+h3, h4{
+  line-height: 1.2em;
+  font-size: 2rem;
+  font-weight:600;
+}
+
+#inp_instr{
+  font-size:10pt;
+  margin-bottom:0;
+  font-style:italic;
+  display:none;
+}
+
+.school_dot{
+  fill-opacity:.7;
+}
+
+.school_dot:hover{
+  fill:#561843;
+}
+
+.input-pads{
+  padding-bottom:300px;
+}
+
+/* d3 */
+#append {
+  padding: 0;
+  margin: 0;
+}
+.county {
+  stroke: #c1b4be;
+  fill:transparent;
+  stroke-width: .4px;
+}
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+svg{
+  /* shape-rendering:crispEdges; */
+
+shape-rendering: geometricPrecision!important;
+}
+
+.bar {
+  fill: #6F257F;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #D4D8DA;
+  stroke-width: 1px;
+}
+.x path {
+  display: none;
+}
+.toolTip {
+  position: absolute;
+  display: none;
+  min-width: 80px;
+  height: auto;
+  background: none repeat scroll 0 0 #ffffff;
+  border: 1px solid #6F257F;
+  padding: 14px;
+  text-align: center;
+}
+
+.label{
+  font-size:.5em;
+}
+
+.bar:hover {
+  fill: brown;
+}
+
+.axis--x path {
+  display: none;
+}
+
+.school {
+  transition: width 2s;
+}
+.school:hover{
+  fill:blue;
+}
+.school-show{
+  stroke:rgb(163, 163, 179);
+}
+
+.county-show{
+  stroke-width:2px;
+}
+
+.line-plot-label{
+  font-size:.5em;
+  fill:black;
+}
+
+
+
+/*other*/
+.text-wrapper{
+  margin:15vh 0 15vh 0;
+}
+
+.percent-table tr:hover{
+  background-color:red;
+}
+.percent-table tr:first-child{
+  background-color:initial;
+}
+
+.table-instr{
+  display:inline-block;
+  font-size:1rem;
+  font-style:italic;
+}
+
+.big-text-col{
+  z-index:999;
+}
+.county-highlight{
+  fill:blue;
+}
+
+.map-link{
+  border-bottom:2px solid #be3b3b;
+}
+.map-link:hover{
+  color: #be3b3b;
+  cursor:pointer;
+}
+
+/*shortcut classes*/
+.fixed{
+  position:fixed;
+  top:0;
+  display:inline-block;
+}
+.inline-block{
+  display:inline-block!important;
+}
+.flex-center{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+
+
+
+/* table */
+
+table{
+  font-size: 1.2rem;
+}
+.table-num{
+  text-align:right;
+}
+.table-text{
+  text-align:left;
+}
+#percent-table-wrapper{
+  padding:1em;
+}
+
+
+/* my css grid*/
+
+#top-explorer, #bottom-explorer{
+  display:grid;
+  margin:0 2%;
+  grid-template-columns:100%;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+header{
+  display:grid;
+  
+}
+#bar-chart{
+  display:grid;
+  grid-template-columns:400px 400px;
+}
+
+#top-sidebar{
+  justify-self: center;
+  grid-column: 1 / -1;
+}
+
+#table-map-wrap{
+  display:inline-grid;
+  grid-template-columns:50% 50%;
+}
+
+/* #bottom-explorer{
+  display:grid;
+  margin:0 10%;
+  grid-template-columns:50% 50%;
+} */
+
+
+
+.svg-container {
+  /* display: inline-block; */
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%; /* aspect ratio */
+  vertical-align: top;
+  overflow: hidden;
+}
+.svg-content-responsive {
+  /* display: inline-block; */
+  /* position: absolute; */
+  top: 10px;
+  left: 0;
+}
+
+.data-lister{
+  /* height: 100px;
+  overflow: hidden;
+  -webkit-transition: height .4s, -webkit-transform .4s;
+    transition: height .4s, ease-in-out .4s; */
+  display: grid;
+  grid-template-rows:1fr;
+  grid-template-columns:500px 1fr;
+  /* margin:5%; */
+}
+.lister_map path{
+  fill:black;
+  opacity:.3;
+}
+.lister_map circle{
+  fill:blue;
+
+}
+
+.lister__map_descr{
+  color:black;
+  font-family:'Merriweather', serif;
+  grid-row: 3;
+  grid-column: 1/3;
+  font-size: 1.3rem;
+  font-size:.5em;
+  font-weight: 300;
+  line-height: 1.9em;
+  margin:0;
+  margin-bottom:1em;
+}
+.school-perf-title{
+  margin-bottom:1em;
+}
+
+.lister__descr{
+  grid-column:1/3;
+}
+.lister__title_wrapper{
+  grid-row:1;
+  grid-column:1/3;
+  margin-bottom:1em;
+}
+.peek{
+  height:200px;
+}
+.expand{
+  height:100%;
+  overflow: initial;
+}
+
+
+#bottom-title-wrapper{
+  display:flex;
+  justify-content: center;
+}
+.bottom-header{
+  font-size: 1.2em;
+  /* border-bottom: 3px solid #be3b3b; */
+  display: inline-block;
+  margin-bottom:0;
+}
+
+#data-list{
+  /* border-left: 4px solid #c1b4be;
+  padding-left: 12px; */
+}
+
+.lister__school_name{
+  font-size: 1em;
+  margin-bottom: 0;
+}
+
+h4.lister__school_district {
+  margin: 0;
+  font-style: italic;
+  font-size: .7em;
+}
+
+.lister__subhead{
+  font-size:.8em;
+  margin:0;
+  grid-column:1/3;
+}
+
+h4.lister__approved_on{
+  font-size:1rem;
+  font-weight:400;
+}
+
+h4.lister__econ_disadv {
+  font-size: .5em;
+  font-weight: 400;
+  color:black;
+}
+
+i.fa.fa-caret-right, i.fa.fa-caret-down {
+  padding-left: .5em;
+}
+
+
+.ui-menu .ui-menu-item-wrapper{
+  font-size:.6em;
+  list-style-image:none;
+}
+.ui-menu .ui-menu-item-wrapper:hover, .ui-menu .ui-menu-item-wrapper:focus, .ui-menu .ui-menu-item-wrapper:focus-within{
+  background-color:#6F257F;
+  list-style-image:none;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+  background: none;
+  background-color: #6F257F;
+  border: none;}
+
+input:focus {
+  outline: transparent;
+  outline-color: transparent;
+  outline-style: none;
+  outline-width: 0;
+  /* border-bottom:3px solid black!important; */
+}
+
+#school_search{
+  font-size:1.2em;
+  border:none;
+  font-size: 16px;
+  width: 95%;
+  height: 50px;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid #d5d5d5;
+  color: #2a2a2a;
+  -webkit-appearance: none;
+  background-color:transparent;
+  font-family:'Lato';
+}
+
+
+/* responsive table */
+
+.spg_table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 60%;
+  /* table-layout: fixed; */
+  grid-column:2/3;
+
+}
+.spg_table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+.spg_table tr {
+  background: #f1f1f1;
+  border: 1px solid #ddd;
+  padding: .35em;
+  text-align:left;
+
+}
+.spg_table th,
+.spg_table td {
+  padding: .625em;
+  text-align: left;
+}
+.spg_table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.orange{
+  color:rgb(255, 127, 14);
+}
+.blue{
+  color:rgb(31, 119, 180);
+}
+@media screen and (max-width: 600px) {
+  .spg_table {
+    border: 0;
+  }
+  .spg_table caption {
+    font-size: 1.3em;
+  }
+  .spg_table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  .spg_table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  .spg_table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  .spg_table td:before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .spg_table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+
+
